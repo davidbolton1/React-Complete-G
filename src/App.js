@@ -4,18 +4,12 @@ import './App.css';
 
 class App extends Component {
   render() {
-    return (
+     return (
       <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">David's React App</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p> */}
         <h1>David's React App</h1>
       </div>
-    );
+      ); 
+      //return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Heyyy'))
   }
 }
 
