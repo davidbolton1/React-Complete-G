@@ -17,7 +17,7 @@ state = {
 }
 
   switchNameHandler = () => {
-    console.log('Was clicked');
+    alert('Was clicked')
   }
 
   render() {
