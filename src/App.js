@@ -47,11 +47,19 @@ state = {
   }
 
   render() {
+    const style = {
+      backgroundColor: 'white',
+      font: 'inherit',
+      border: '1px solid blue',
+      padding: '8px'
+    };
      return (
       <div className="App">
         <h1>David's React App</h1>
         <p>This is working!</p>
-        <button onClick={() => this.switchNameHandler('Tollsfsafa')}>Switch Name</button>
+        <button 
+        style={style}
+        onClick={() => this.switchNameHandler('Tollsfsafa')}>Switch Name</button>
         <Person 
         name={this.state.persons[0].name} age={this.state.persons[0].age}/> 
         <Person 
