@@ -66,7 +66,7 @@ state = {
         <p>This is working!</p>
         <button 
         style={style}
-        onClick={ this.togglePersonsHandler}>Switch Name
+        onClick={ this.togglePersonsHandler}>Toggle Persons
         </button>
         
         { 
