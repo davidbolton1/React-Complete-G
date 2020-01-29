@@ -22,13 +22,14 @@ state = {
     //console.log('Was clicked')
     this.setState({
       persons: [
-        {
+        { id: 'asf',
           name: newName, age: 28
         }, 
-        {
+        { id: 'as23f',
           name: 'Manu', age: 29 
-        },
-        {name: 'Stephanie', age: 29}
+        }, 
+        { id: 'asasdfasf',
+          name: 'Stephanie', age: 29}
       ],
     })
   }
@@ -76,7 +77,8 @@ state = {
           return <Person
           click={() => this.deletePersonHandler(index)} 
           name={person.name} 
-          age={person.age} />
+          age={person.age}
+          key={person.id}/>
         })}
         </div>
       );
