@@ -39,7 +39,7 @@ state = {
     this.setState({showPersons: !doesShow});
   }
 
-  nameChangedHandler = (event) => {
+  nameChangedHandler = (event, id) => {
     this.setState({
       persons: [
         {
@@ -78,7 +78,8 @@ state = {
           click={() => this.deletePersonHandler(index)} 
           name={person.name} 
           age={person.age}
-          key={person.id}/>
+          key={person.id}
+          changed={(event) => this.nameChangedHandler(event, person.id)}/>
         })}
         </div>
       );
