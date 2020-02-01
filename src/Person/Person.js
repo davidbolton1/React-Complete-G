@@ -1,6 +1,6 @@
 import React from 'react';
 import './Person.css';
-
+import Radium from 'radium';
 /* const 5 = [1, -1, 3]
 const t2 = t.concat(5)
 console.log(t2) = [1, -1, 3, 5]
@@ -16,4 +16,4 @@ const Person = (props) => {
         </div>
     )
 };
-export default Person; 
+export default Radium(Person); 
