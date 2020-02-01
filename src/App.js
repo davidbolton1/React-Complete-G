@@ -5,7 +5,7 @@ import Person from './Person/Person';
 import styled from 'styled-components';
 //import Radium, { StyleRoot } from 'radium';
 const Styledbutton = styled.button`
-background-color: green;
+background-color: ${props => props.alt ? 'red' : 'green'};
 color: white;
 font: inherit;
 border: 1px solid blue;
@@ -13,7 +13,7 @@ padding: 8px;
 cursor: pointer;
 
 &:hover {
-  background-color: lightgreen;
+  background-color: ${props => props.alt ? 'salmon' : 'lightgreen'};
   color: black
 }
 `;
@@ -81,18 +81,18 @@ state = {
   }
 
   render() {
-    const style = {
-      backgroundColor: 'green',
-      color: 'white',
-      font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer',
-      ':hover': {
-        backgroundColor: 'lightgreen',
-        color: 'black'
-      }
-    };
+    // const style = {
+    //   backgroundColor: 'green',
+    //   color: 'white',
+    //   font: 'inherit',
+    //   border: '1px solid blue',
+    //   padding: '8px',
+    //   cursor: 'pointer',
+    //   ':hover': {
+    //     backgroundColor: 'lightgreen',
+    //     color: 'black'
+    //   }
+    // };
     let persons = null;
 
     if (this.state.showPersons) {
@@ -108,11 +108,11 @@ state = {
         })}
         </div>
       );
-      style.backgroundColor = 'red';
-      style[':hover']= {
-        backgroundColor: 'salmon',
-        color: 'black'
-      };
+      // style.backgroundColor = 'red';
+      // style[':hover']= {
+      //   backgroundColor: 'salmon',
+      //   color: 'black'
+      // };
     }
 
     const classes = [];
@@ -129,7 +129,8 @@ state = {
       <div className="App">
         <h1>David's React App</h1>
         <p className={classes.join(' ')}>This is working!</p>
-        <Styledbutton 
+        <Styledbutton
+        alt={this.state.showPersons} 
         onClick={ this.togglePersonsHandler}>Toggle Persons
         </Styledbutton>
       {persons}
