@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css'; 
 import Person from './Person/Person';
-import Radium from 'radium';
+import Radium, { StyleRoot } from 'radium';
 
 class App extends Component {
 state = {
@@ -111,6 +111,7 @@ state = {
     //let classes = ['red', 'bold'].join(' ');
 
      return (
+       <StyleRoot>
       <div className="App">
         <h1>David's React App</h1>
         <p className={classes.join(' ')}>This is working!</p>
@@ -121,6 +122,7 @@ state = {
       {persons}
         
       </div>
+      </StyleRoot>
       ); 
       //return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Heyyy'))
   }
