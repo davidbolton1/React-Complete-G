@@ -2,7 +2,21 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css'; 
 import Person from './Person/Person';
+import styled from 'styled-components';
 //import Radium, { StyleRoot } from 'radium';
+const Styledbutton = styled.button`
+background-color: green;
+color: white;
+font: inherit;
+border: 1px solid blue;
+padding: 8px;
+cursor: pointer;
+
+&:hover {
+  background-color: lightgreen;
+  color: black
+}
+`;
 
 class App extends Component {
 state = {
@@ -115,10 +129,9 @@ state = {
       <div className="App">
         <h1>David's React App</h1>
         <p className={classes.join(' ')}>This is working!</p>
-        <button 
-        style={style}
+        <Styledbutton 
         onClick={ this.togglePersonsHandler}>Toggle Persons
-        </button>
+        </Styledbutton>
       {persons}
         
       </div>

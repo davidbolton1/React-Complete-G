@@ -22,11 +22,11 @@ text-align: center;
 `
 
 const Person = (props) => {
-    const style = {
-        '@media (min-width: 500px)': {
-            width: '450px'
-        }
-    };
+    // const style = {
+    //     '@media (min-width: 500px)': {
+    //         width: '450px'
+    //     }
+    // };
     //console.log(props)
     return ( 
     //< div className="Person" style={style}>
