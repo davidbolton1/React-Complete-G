@@ -9,6 +9,7 @@ Adding some things later
 */
 const StyledDiv = styled.div`
 width: 70%;
+height: 50%;
 margin: auto;
 border: 1rem solid #eee;
 box-shadow: 0 2px 3px #ccc;

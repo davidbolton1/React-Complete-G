@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css'; 
 import Person from './Person/Person';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 //import Radium, { StyleRoot } from 'radium';
+/*
 const Styledbutton = styled.button`
 background-color: ${props => props.alt ? 'red' : 'green'};
 color: white;
@@ -17,7 +18,7 @@ cursor: pointer;
   color: black
 }
 `;
-
+*/
 class App extends Component {
 state = {
   persons: [
@@ -129,14 +130,14 @@ state = {
       <div className="App">
         <h1>David's React App</h1>
         <p className={classes.join(' ')}>This is working!</p>
-        <Styledbutton
+        <button className="button"
         alt={this.state.showPersons} 
         onClick={ this.togglePersonsHandler}>Toggle Persons
-        </Styledbutton>
+        </button>
       {persons}
         
       </div>
-      //</StyleRoot>
+      //</StyleRsoot>
       ); 
       //return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Heyyy'))
   }
