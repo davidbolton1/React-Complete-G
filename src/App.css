@@ -9,6 +9,14 @@
   font-weight: bold;
 }
 
+.button.Red {
+  background-color: red;
+
+}
+
+.button.Red:hover {
+  background-color: salmon;
+}
 .button {
 background-color: green;
 color: white;

@@ -83,6 +83,8 @@ state = {
   }
 
   render() {
+    let persons = null;
+    let btnClass= [classes.button];
     // const style = {
     //   backgroundColor: 'green',
     //   color: 'white',
@@ -95,7 +97,7 @@ state = {
     //     color: 'black'
     //   }
     // };
-    let persons = null;
+
 
     if (this.state.showPersons) {
       persons = (
@@ -110,6 +112,7 @@ state = {
         })}
         </div>
       );
+      btnClass.push(classes.Red);
       // style.backgroundColor = 'red';
       // style[':hover']= {
       //   backgroundColor: 'salmon',
@@ -131,7 +134,7 @@ state = {
       <div className={classes.App}>
         <h1>David's React App</h1>
         <p className={assignedClasses.join(' ')}>This is working!</p>
-        <button className={classes.button}
+        <button className={btnClass.join(' ')}
         alt={this.state.showPersons} 
         onClick={ this.togglePersonsHandler}>Toggle Persons
         </button>
