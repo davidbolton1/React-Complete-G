@@ -22,6 +22,12 @@ cursor: pointer;
 `;
 */
 class App extends Component {
+  constructor(props) {
+    super(props);
+    console.log('constructor')
+  }
+
+
 state = {
   persons: [
     {
@@ -36,6 +42,10 @@ state = {
   showPersons: false
 }
 
+static getDerivedStateFromProps(props, state) {
+  console.log('getDerivedStateFromProps', props)
+  return state;
+}
   switchNameHandler = (newName) => {
     //console.log('Was clicked')
     this.setState({
@@ -107,6 +117,7 @@ state = {
           persons={this.state.persons}
           clicked={this.deletePersonHandler}
           changed={this.nameChangedHandler}
+  
           />
 
         {/* {this.state.persons.map((person, index) => {
@@ -140,8 +151,10 @@ state = {
        //<StyleRoot>
       <div className={classes.App}>
         <Cockpit 
+        title={this.props.appTitle}
         showPersons = {this.state.showPersons}
-        persons={this.state.persons} />
+        persons={this.state.persons}
+        clicked={this.togglePersonsHandler} />
         {/* <h1>David's React App</h1>
         <p className={assignedClasses.join(' ')}>This is working!</p>
         <button className={btnClass.join(' ')}
